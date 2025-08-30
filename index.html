@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Personal Portfolio Website Design | Codehal</title>
+
+    <!-- box icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- header design -->
+    <header class="header">
+      <a href="#" class="logo">Portfolio</a>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <!-- home section design -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hello, It's Me</h3>
+        <h1>Puseam</h1>
+        <h3>And I'm a <span id="animated-text"></span></h3>
+        <script>
+          const text = "Frontend Developer";
+          const animatedText = document.getElementById("animated-text");
+          let index = 0;
+
+          function type() {
+            if (index < text.length) {
+              animatedText.innerHTML += text.charAt(index);
+              index++;
+              setTimeout(type, 500); // speed of typing (ms)
+            }
+          }
+
+          type();
+        </script>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Distinctio atque enim dolorum, sapiente autem eveniet nulla.
+        </p>
+        <div class="social-media">
+          <a href="https://www.facebook.com/@seamkh.khseam" onclick="openPopup(this.href); return false;">
+            <i class="bx bxl-facebook"></i>
+          </a>
+          <a href="https://www.tiktok.com/@seammout1" onclick="openPopup(this.href); return false;">
+            <i class="bx bxl-tiktok"></i>
+          </a>
+          <a href="https://t.me/seam_ironman" onclick="openPopup(this.href); return false;">
+            <i class="bx bxl-telegram"></i>
+          </a>
+          <a href="https://www.instagram.com/mellodyseam" onclick="openPopup(this.href); return false;">
+            <i class="bx bxl-instagram-alt"></i>
+          </a>
+          <a href="https://www.youtube.com/@seamkh2202" onclick="openPopup(this.href); return false;">
+            <i class="bx bxl-youtube"></i>
+          </a>
+          <a href="https://twitter.com/@seam_kh30856" onclick="openPopup(this.href); return false;">
+            <i class="bx bxl-twitter"></i>
+          </a>
+            <a href="https://www.pinterest.com/seamkh1122/" onclick="openPopup(this.href); return false;">
+            <i class="bx bxl-pinterest"></i>
+          </a>
+        </div>
+
+        <script>
+        function openPopup(url) {
+          window.open(
+            url, 
+            'popupWindow', 
+            'width=600,height=600,scrollbars=yes,resizable=yes'
+          );
+        }
+        </script>
+
+        <a href="cv.pdf" download class="btn">Download CV</a>
+
+      </div>
+
+      <div class="home-img">
+        <img src="images/home.png" alt="Portrait of Puseam" />
+      </div>
+    </section>
+    <!-- about section design -->
+<section class="about" id="about">
+  <div class="about-img">
+    <img src="images/about.png" alt="About Me Image" />
+  </div>
+  <div class="about-content">
+    <h2 class="heading">About<span>Me</span></h2>
+    <h3>Frontend Developer</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+       Mauris feugiat, arcu sit amet varius pretium, lacus dui 
+       tincidunt nibh, vitae tempor justo libero id risus.</p>
+       <a href="" class="btn">Read More</a>
+  </div>
+</section>
+    <!-- services section design -->
+<section class="services" id="services">
+  <h2 class="heading">Our <span>Services</span></h2>
+
+  <div class="services-container">
+    <div class="services-box">
+      <i class='bx bx-code-alt'></i>
+      <h3>Web Development</h3>
+      <p>I create responsive and modern websites using HTML, CSS, JavaScript, and frameworks.</p>
+    </div>
+
+    <div class="services-box">
+      <i class='bx bxs-paint'></i>
+      <h3>UI/UX Design</h3>
+      <p>Clean, user-friendly, and aesthetic designs to improve user experience and engagement.</p>
+    </div>
+
+    <div class="services-box">
+      <i class='bx bx-bar-chart-alt'></i>
+      <h3>Digital Marketing</h3>
+      <p>Helping businesses grow online with SEO, social media, and digital strategies.</p>
+    </div>
+
+    <div class="services-box">
+      <i class='bx bx-mobile-alt'></i>
+      <h3>App Development</h3>
+      <p>Building cross-platform mobile apps with smooth performance and modern UI.</p>
+    </div>
+
+    <div class="services-box">
+      <i class='bx bx-camera'></i>
+      <h3>Photography</h3>
+      <p>High-quality photoshoots for events, branding, and product showcases.</p>
+    </div>
+
+    <div class="services-box">
+      <i class='bx bx-edit-alt'></i>
+      <h3>Content Writing</h3>
+      <p>Creating engaging blog posts, articles, and copywriting tailored for your brand.</p>
+    </div>
+  </div>
+  </section>
+      <!-- portfolio section design -->
+  <section class="portfolio" id="portfolio">
+    <h2 class="heading">My <span>Portfolio</span></h2>
+
+    <div class="portfolio-container">
+      <div class="portfolio-card">
+        <img src="images/portfolio1.jpg" alt="Project 1">
+        <h3>Project One</h3>
+        <p>Web development project using HTML, CSS, and JavaScript.</p>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="images/portfolio2.jpg" alt="Project 2">
+        <h3>Project Two</h3>
+        <p>Responsive UI/UX design project for a business website.</p>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="images/portfolio3.jpg" alt="Project 3">
+        <h3>Project Three</h3>
+        <p>E-commerce website with shopping cart and payment gateway.</p>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="images/portfolio4.jpg" alt="Project 4">
+        <h3>Project Four</h3>
+        <p>Mobile app development project for Android and iOS.</p>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="images/portfolio5.jpg" alt="Project 5">
+        <h3>Project Five</h3>
+        <p>Branding and graphic design for marketing campaign.</p>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="images/portfolio6.jpg" alt="Project 6">
+        <h3>Project Six</h3>
+        <p>Content creation and blogging platform project.</p>
+      </div>
+    </div>
+    </section>
+        <!-- contact section design -->
+        <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span></h2>
+
+      <div class="contact-container">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="info-box">
+            <i class='bx bx-phone'></i>
+            <h3>Phone</h3>
+            <p>+855 123 456 789</p>
+          </div>
+          <div class="info-box">
+            <i class='bx bx-envelope'></i>
+            <h3>Email</h3>
+            <p>puseam@example.com</p>
+          </div>
+          <div class="info-box">
+            <i class='bx bx-map'></i>
+            <h3>Location</h3>
+            <p>Phnom Penh, Cambodia</p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+            <form class="contact-form" id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="subject" placeholder="Subject" required>
+      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+
+      <!-- Spinner (លាក់ដើម) -->
+      <div id="loading" class="spinner" style="display:none;"></div>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+   <script>
+    const BOT_TOKEN = "YOUR_BOT_TOKEN"; // ពី BotFather
+    const CHAT_ID = "YOUR_CHAT_ID"; // ពី get_id_bot
+    const TELEGRAM_API = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+    const form = document.getElementById("contactForm");
+    const spinner = document.getElementById("loading");
+    const submitBtn = form.querySelector("button[type='submit']");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        // Show spinner and disable button
+        spinner.style.display = "block";
+        submitBtn.disabled = true;
+        submitBtn.innerText = "Sending...";
+
+        let name = document.querySelector('input[name="name"]').value;
+        let email = document.querySelector('input[name="email"]').value;
+        let subject = document.querySelector('input[name="subject"]').value;
+        let message = document.querySelector('textarea[name="message"]').value;
+
+        // Construct the message with an emoji for a professional touch
+        let fullMessage = `📩 New Contact Message\n\n👤 Name: ${name}\n📧 Email: ${email}\n📝 Subject: ${subject}\n💬 Message: ${message}`;
+
+        fetch(TELEGRAM_API, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                chat_id: CHAT_ID,
+                text: fullMessage,
+                parse_mode: "Markdown"
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            // Hide spinner and re-enable button
+            spinner.style.display = "none";
+            submitBtn.disabled = false;
+            submitBtn.innerText = "Send Message";
+
+            if (data.ok) {
+                alert("✅ Message Sent Successfully to Telegram!");
+                form.reset();
+            } else {
+                alert("❌ Failed to send message!");
+                console.error(data);
+            }
+        })
+        .catch(err => {
+            // Hide spinner and re-enable button on error
+            spinner.style.display = "none";
+            submitBtn.disabled = false;
+            submitBtn.innerText = "Send Message";
+
+            alert("⚠️ Error sending message.");
+            console.error(err);
+        });
+    });
+</script>
+      </div>
+    </section>
+
+
+
+    <!-- footer design -->
+    <footer class="footer">
+      <p>&copy; 2025 Puseam | All Rights Reserved.</p>
+    </footer>
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- typed js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- custom js -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
